@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.flyer.xcloud</groupId>
+        <artifactId>xcloud-saas-build</artifactId>
+        <version>${revision}</version>
+
+    </parent>
+    <groupId>com.flyer.xcloud</groupId>
+    <artifactId>xcloud-saas-pub-build</artifactId>
+    <name>xcloud-saas-pub-build</name>
+
+
+    <description>Demo project for Spring Boot</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>xcloud-saas-pub-tenant</module>
+        <module>xcloud-saas-pub-orgunit</module>
+        <module>xcloud-saas-pub-permission</module>
+        <module>xcloud-saas-pub-user</module>
+        <module>xcloud-saas-pub-menu</module>
+        <module>xcloud-saas-pub-person</module>
+        <module>xcloud-saas-pub-project</module>
+    </modules>
+
+
+
+
+    <dependencies>
+        <dependency>
+            <groupId>com.flyer.xcloud</groupId>
+            <artifactId>xcloud-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.flyer.xcloud</groupId>
+            <artifactId>xcloud-boot-starter-001</artifactId>
+        </dependency>
+    </dependencies>
+
+<!--    <dependencyManagement>-->
+<!--        <dependencies>-->
+<!--            <dependency>-->
+<!--                <groupId>com.flyer.xcloud</groupId>-->
+<!--                <artifactId>xcloud-boot-dependencies</artifactId>-->
+<!--                <version>${xcloud.version}</version>-->
+<!--                <type>pom</type>-->
+<!--                <scope>import</scope>-->
+<!--            </dependency>-->
+<!--        </dependencies>-->
+<!--    </dependencyManagement>-->
+
+
+
+</project>
