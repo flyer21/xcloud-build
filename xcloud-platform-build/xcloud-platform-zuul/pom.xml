@@ -9,13 +9,13 @@
         <relativePath>..</relativePath>
     </parent>
     <groupId>com.flyer.xcloud</groupId>
-    <artifactId>xcloud-platform-gateway</artifactId>
+    <artifactId>xcloud-platform-zuul</artifactId>
 
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-gateway</artifactId>
+            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
 
         </dependency>
     </dependencies>

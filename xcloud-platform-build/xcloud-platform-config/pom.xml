@@ -5,11 +5,11 @@
     <parent>
         <groupId>com.flyer.xcloud</groupId>
         <artifactId>xcloud-platform-build</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
     </parent>
     <groupId>com.flyer.xcloud</groupId>
     <artifactId>xcloud-platform-config</artifactId>
-    <name>xcloud-config</name>
+    <name>xcloud-platform-config</name>
     <description>Demo project for Spring Boot</description>
 
 

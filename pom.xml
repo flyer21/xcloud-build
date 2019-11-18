@@ -13,8 +13,7 @@
     <modules>
         <module>xcloud-boot-build</module>
         <module>xcloud-platform-build</module>
-        <module>xcloud-pub-build</module>
-        <module>xcloud-business-build</module>
+        <module>xcloud-saas-build</module>
     </modules>
 
 

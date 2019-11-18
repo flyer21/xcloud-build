@@ -6,19 +6,20 @@
         <groupId>com.flyer.xcloud</groupId>
         <artifactId>xcloud-platform-build</artifactId>
         <version>${revision}</version>
-        <relativePath>..</relativePath>
     </parent>
     <groupId>com.flyer.xcloud</groupId>
-    <artifactId>xcloud-platform-gateway</artifactId>
+    <artifactId>xcloud-platform-auth</artifactId>
+    <name>xcloud-platform-auth</name>
+    <description>Demo project for Spring Boot</description>
 
 
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-gateway</artifactId>
-
+            <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
-    </dependencies>
 
+    </dependencies>
 
 </project>

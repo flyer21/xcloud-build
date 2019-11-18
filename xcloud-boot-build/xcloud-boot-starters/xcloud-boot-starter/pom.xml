@@ -5,11 +5,10 @@
     <parent>
         <groupId>com.flyer.xcloud</groupId>
         <artifactId>xcloud-boot-starters</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
     </parent>
     <groupId>com.flyer.xcloud</groupId>
     <artifactId>xcloud-boot-starter</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <name>xcloud-boot-starter</name>
     <description>Demo project for Spring Boot</description>
 

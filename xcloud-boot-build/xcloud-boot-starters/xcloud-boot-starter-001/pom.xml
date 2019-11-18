@@ -4,21 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.flyer.xcloud</groupId>
-        <artifactId>xcloud-platform-build</artifactId>
+        <artifactId>xcloud-boot-starters</artifactId>
         <version>${revision}</version>
-        <relativePath>..</relativePath>
     </parent>
     <groupId>com.flyer.xcloud</groupId>
-    <artifactId>xcloud-platform-gateway</artifactId>
-
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-gateway</artifactId>
-
-        </dependency>
-    </dependencies>
+    <artifactId>xcloud-boot-starter-001</artifactId>
+    <name>xcloud-boot-starter-001</name>
+    <description>Demo project for Spring Boot</description>
 
 
 </project>

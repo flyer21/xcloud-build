@@ -5,12 +5,14 @@
     <parent>
         <groupId>com.flyer.xcloud</groupId>
         <artifactId>xcloud-boot-parent</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../xcloud-boot-build/xcloud-boot-parent</relativePath>
+        <version>2.0.0.RELEASE</version>
+        <relativePath></relativePath>
+<!--        <relativePath>../xcloud-boot-build/xcloud-boot-parent</relativePath>-->
     </parent>
     <groupId>com.flyer.xcloud</groupId>
     <artifactId>xcloud-platform-build</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+<!--    <version>${revision}</version>-->
+    <version>${revision}</version>
     <name>xcloud-platform-build</name>
     <description>Demo project for Spring Boot</description>
     <packaging>pom</packaging>
@@ -19,25 +21,56 @@
         <module>xcloud-platform-eureka</module>
         <module>xcloud-platform-config</module>
         <module>xcloud-platform-gateway</module>
+        <module>xcloud-platform-zuul</module>
+        <module>xcloud-platform-auth</module>
     </modules>
 
+
+    <properties>
+        <revision>0.0.3-SNAPSHOT</revision>
+        <DOCKER_HOST>tcp://192.168.56.220:2375</DOCKER_HOST>
+
+    </properties>
+
+
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.junit.vintage</groupId>
-                    <artifactId>junit-vintage-engine</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <version>1.1.0</version>
 
+                <configuration>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>flatten</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+
+
+    <repositories>
+        <repository>
+            <id>spring</id>
+            <url>https://maven.aliyun.com/repository/spring</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>

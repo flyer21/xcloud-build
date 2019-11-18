@@ -5,21 +5,61 @@
 
     <groupId>com.flyer.xcloud</groupId>
     <artifactId>xcloud-boot-dependencies</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>xcloud-boot-dependencies</name>
+    <packaging>pom</packaging>
     <description>Demo project for Spring Boot</description>
+    <parent>
+        <groupId>com.flyer.xcloud</groupId>
+        <artifactId>xcloud-boot-build</artifactId>
+        <version>${revision}</version>
+    </parent>
 
+    <build>
+        <plugins>
 
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <inherited>true</inherited>
+                <executions>
+                <execution>
+                <id>flatten</id>
+                <phase>process-resources</phase>
+                <goals>
+                    <goal>flatten</goal>
+                </goals>
+                <configuration>
+                    <updatePomFile>true</updatePomFile>
+                    <flattenMode>bom</flattenMode>
+                    <pomElements>
+<!--                        <parent>remove</parent>-->
+                        <parent>resolve</parent>
+                        <pluginManagement>keep</pluginManagement>
+                        <dependencyManagement>interpolate</dependencyManagement>
+                        <properties>remove</properties>
+                        <repositories>remove</repositories>
+                    </pomElements>
+                </configuration>
+                </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
     <dependencyManagement>
         <dependencies>
 
             <dependency>
                 <groupId>com.flyer.xcloud</groupId>
                 <artifactId>xcloud-boot-starter</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>${xcloud-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.flyer.xcloud</groupId>
+                <artifactId>xcloud-boot-starter-001</artifactId>
+                <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
-
 
 </project>
